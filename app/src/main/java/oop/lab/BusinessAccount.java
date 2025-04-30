@@ -1,6 +1,6 @@
 package oop.lab;
 
-public class BusinessAccount extends BankAccount{
+public class BusinessAccount extends BankAccount implements LoanService, OnlineService{
 
     private String loanStatus;
 
@@ -25,5 +25,15 @@ public class BusinessAccount extends BankAccount{
 
     public String checkLoanStatus(){
         return loanStatus;
+    }
+
+    @Override
+    public void transferFunds(double amount, String targetAccount){
+        withdraw(amount);
+    }
+
+    @Override
+    public void payBills(double amount){
+        withdraw(amount);
     }
 }

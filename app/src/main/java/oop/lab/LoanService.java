@@ -1,5 +1,6 @@
 package oop.lab;
 
-public class LoanService {
-    
+public interface LoanService {
+    void applyForLoan(double amount);
+    String checkLoanStatus();
 }

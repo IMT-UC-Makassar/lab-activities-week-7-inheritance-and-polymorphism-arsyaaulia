@@ -16,7 +16,7 @@ public abstract class BankAccount {
             throw new IllegalArgumentException ("Amount must be possitive");
         }
 
-        balance += 0;
+        balance += amount;
     }
 
     public void withdraw(double amount){
@@ -28,7 +28,7 @@ public abstract class BankAccount {
             throw new IllegalArgumentException("Insufficient funds");
         } 
         
-        amount -= balance;
+        balance -= amount;
     }
     
     public double getBalance(){
